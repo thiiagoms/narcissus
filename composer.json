@@ -1,0 +1,16 @@
+{
+  "name": "thiiagoms/github-unfollower",
+  "description": "remove github followers with script",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Thiago Silva",
+      "email": "thiagom.devsec@gmail.com"
+    }
+  ],
+  "require": {
+    "vlucas/phpdotenv": "^5.5",
+    "guzzlehttp/guzzle": "^7.0"
+  }
+}
