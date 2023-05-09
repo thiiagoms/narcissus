@@ -42,7 +42,8 @@ final class GitHubRepository
      *
      * @param string $token The access token to authenticate the request to the GitHub API.
      *
-     * @return ResponseInterface response from the GitHub API containing the list of users that the authenticated user follows.
+     * @return ResponseInterface response from the GitHub API containing the list of users
+     * that the authenticated user follows.
      *
      * @throws GuzzleException When an error occurs while making the request to the GitHub API.
      */
@@ -70,7 +71,8 @@ final class GitHubRepository
      * @param string $token The access token to authenticate the request to the GitHub API.
      * @param string $usernameToUnfollow username of the GitHub user to check if the authenticated user is following.
      *
-     * @return ResponseInterface response from the GitHub API indicating if the authenticated user is following the specified user.
+     * @return ResponseInterface response from the GitHub API indicating
+     * if the authenticated user is following the specified user.
      *
      * @throws GuzzleException When an error occurs while making the request to the GitHub API.
      */
