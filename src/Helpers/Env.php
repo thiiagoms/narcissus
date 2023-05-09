@@ -10,7 +10,7 @@ use Dotenv\Dotenv;
  * Env file helper
  *
  * @package Narcissus\Helpers
- * @author  Thiago <thiiagoms@proton.me>
+ * @author Thiago <thiiagoms@proton.me>
  * @version 1.0
  */
 final class Env
