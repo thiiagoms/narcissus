@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+<?php
+
+if (php_sapi_name() != 'cli') {
+    die("<h1>Only in CLI mode</h1>");
+}
+
+if (!file_exists(__DIR__ . '/.env')) {
+    die('.env file not found' . PHP_EOL);
+}
+
+require_once 'bootstrap.php';
+
+use Narcissus\Commands\BannerCommand;
+use Narcissus\Commands\GitHubCommand;
+
+BannerCommand::init();
+
+$username = readline('=> username: ');
+
+/** @var GitHubCommand $app */
+$app->unfollow($username);
