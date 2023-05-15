@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Narcissus\Services;
 
 use GuzzleHttp\Exception\GuzzleException;
+use Narcissus\Enums\Response;
 use Narcissus\Helpers\Printer;
 use Narcissus\Repositories\GitHubRepository;
 
@@ -35,7 +36,7 @@ class GitHubService
     private function isFollowingUser(string $username, string $token, string $usernameToUnfollow): bool
     {
         $response = $this->gitHubRepository->isFollowingUser($username, $token, $usernameToUnfollow);
-        return $response->getStatusCode() === 204;
+        return $response->getStatusCode() === Response::HTTP_NO_CONTENT;
     }
 
     /**
@@ -49,7 +50,7 @@ class GitHubService
     private function unfollowUser(string $token, string $unfollowUsername): bool
     {
         $response = $this->gitHubRepository->unfollowUser($token, $unfollowUsername);
-        return $response->getStatusCode() === 204;
+        return $response->getStatusCode() === Response::HTTP_NO_CONTENT;
     }
 
     /**
